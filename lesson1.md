@@ -72,3 +72,92 @@ https://github.com/google/ios-webkit-debug-proxy
 linux and mac needed for this but should checkout the documentation on the repository.
 
 ---
+
+lesson 2
+========
+
+browser deals with dips: device independent pixels
+and hardware deals with : hardware pixels
+
+  both are different: a pixel is not always pixel.
+
+dpi = hardwarepixels/ pixel ratio
+
+---
+
+meta viewport tag used to scale site to device width.
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag
+
+---
+
+css points: use relative units for width instead of actual lengths
+
+even add this to main css file (recomended):
+
+img, embed, object, video {
+   max-width: 100%;
+ }
+
+a button should be 48px wide and long to make sure its tappable.
+40 pixels of room between any to buttons to make sure not to hit 2 buttons at same time. or miss it completely.
+
+---
+```
+nav a, button{
+  min-width: 48px;
+  min-height: 48px;
+}
+```
+
+---
+
+w3 school css properties list for reference:
+https://www.w3.org/community/webed/wiki/CSS/Properties
+
+---
+
+for Responsive design start to plan for smaller screen and keep working up. this is right approach.
+
+steps for making a site Responsive:
+
+1 enter the meta viewport tag.
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+2 make max width 100% so it does not overflows.:
+
+```
+max-width:100%;
+```
+
+but cameron did :
+```
+width:100%
+```
+changing the actual width from pixels.
+
+3
+make buttons touchable easily.
+```
+nav a, button{
+  min-width: 48px;
+  min-height: 48px;
+}
+```
+
+but cameron did
+
+```
+padding: 1.5em;
+```
+
+4 test layout on different screens.
+
+================
