@@ -161,3 +161,29 @@ padding: 1.5em;
 4 test layout on different screens.
 
 ================
+
+lesson 3:
+
+```
+<link rel="stylesheet" media="screen and (min-width:500px)" href="over500.css">
+
+or
+
+@media screen and (min-width: 500px){
+  body { background-color: green; }
+}
+
+
+```
+
+there is another way also with @import but for performance reasons we dont use it ever.
+
+with linked css you get many http requests.
+
+with @media you get few big http requests.
+
+---
+
+min-width and max-width are the two most commonly used properties to make Responsive design.
+
+---
